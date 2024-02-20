@@ -1,0 +1,694 @@
+body {
+    margin: 0;
+}
+
+.header {
+    margin: 0;
+}
+
+.move-order .animation-bg .animation-bg-element {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: calc(100% / 10);
+    z-index: 999;
+    animation-name: PageAnime-move-order;
+    animation-duration: 0.5s;
+    animation-delay: 0.1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.move-order .animation-bg .animation-bg-element:nth-child(2) {
+    left: 10%;
+    animation-delay: 0.2s;
+}
+
+.move-order .animation-bg .animation-bg-element:nth-child(3) {
+    left: 20%;
+    animation-delay: 0.3s;
+}
+
+.move-order .animation-bg .animation-bg-element:nth-child(4) {
+    left: 30%;
+    animation-delay: 0.4s;
+}
+
+.move-order .animation-bg .animation-bg-element:nth-child(5) {
+    left: 40%;
+    animation-delay: 0.5s;
+}
+
+.move-order .animation-bg .animation-bg-element:nth-child(6) {
+    left: 50%;
+    animation-delay: 0.6s;
+}
+
+.move-order .animation-bg .animation-bg-element:nth-child(7) {
+    left: 60%;
+    animation-delay: 0.7s;
+}
+
+.move-order .animation-bg .animation-bg-element:nth-child(8) {
+    left: 70%;
+    animation-delay: 0.8s;
+}
+
+.move-order .animation-bg .animation-bg-element:nth-child(9) {
+    left: 80%;
+    animation-delay: 0.9s;
+}
+
+.move-order .animation-bg .animation-bg-element:nth-child(10) {
+    left: 90%;
+    animation-delay: 1s;
+}
+
+.move-order .animation-bg .animation-bg-element::before {
+    background: #ff97bd;
+    box-shadow: 0 0 0 1px #ff97bd;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 順番に閉じる キーフレーム */
+@keyframes PageAnime-move-order {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.container {
+    position: relative;
+    max-width: 3000px;
+    margin-bottom: 19px;
+    width: 100%;
+    z-index: -10;
+}
+
+
+.swiper-container {
+    text-align: center;
+    height: 745px;
+    cursor: grab;
+}
+
+.swiper-container:active {
+    cursor: grabbing;
+}
+
+.swiper-container .swiper-slide img {
+    max-width: 110%;
+    width: 101%;
+    height: 130%;
+}
+
+#thumbs {
+    height: 10%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin-top: -6%;
+    width: 30%;
+}
+
+#thumbs .swiper-slide {
+    width: 16%;
+    height: auto;
+    opacity: 0.5;
+    cursor: grab;
+}
+
+#thumbs .swiper-slide:active {
+    cursor: grabbing;
+}
+
+#thumbs .swiper-slide-active {
+    opacity: 1;
+}
+
+
+.swiper-blind-left,
+.swiper-blind-right {
+    position: absolute;
+    width: 11.55%;
+    height: 100%;
+    display: block;
+    top: 0;
+    background: rgba(255, 255, 255, .7);
+    z-index: -1;
+}
+
+.swiper-blind-left {
+    left: 0;
+}
+
+.swiper-blind-right {
+    right: 0;
+}
+
+@media (max-width: 600px) {
+
+    .swiper-blind-left,
+    .swiper-blind-right {
+        display: none;
+    }
+}
+
+.mainpage {
+    margin: 0;
+}
+
+.mainpage a {
+    margin: 0;
+}
+
+.page img {
+    margin: 0;
+    width: 100%;
+    margin-top: -10px;
+}
+
+
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100vw;
+}
+
+
+.menu li {
+    /* background-image: linear-gradient(60deg, #317cd2 0%, #485563 100%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .3s ease-in-out;
+    height: 100vh;
+    margin-right: 10%;
+    width: 12.9vw;
+}
+
+.menu li a {
+    color: #fff;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+.menu li:nth-of-type(2) {
+    transition-delay: .025s;
+}
+
+.menu li:nth-of-type(3) {
+    transition-delay: .05s;
+}
+
+.menu li:nth-of-type(4) {
+    transition-delay: .075s;
+}
+
+.menu li:nth-of-type(5) {
+    transition-delay: .1s;
+}
+
+.menu.open li {
+    transform: translateY(100vh);
+}
+
+#aitm1 li {
+    background-color: #db4a4a;
+}
+
+#aitm2 li {
+    background-color: #f8bc77;
+}
+
+#aitm3 li {
+    background-color: #73bae2;
+}
+
+#aitm4 li {
+    background-color: #a6664b;
+}
+
+#aitm5 li {
+    background-color: #7a9154;
+}
+
+#aitm6 li {
+    background-color: #c176b3;
+}
+
+#aitm7 li {
+    background-color: #6199db;
+}
+
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        top: 0;
+        left: -100vw;
+    }
+
+    .menu li {
+        height: 20vh;
+        width: 100vw;
+    }
+
+    .menu.open li {
+        transform: translateX(100vw);
+    }
+}
+
+/* Hamburger menu */
+.hamburger-menu {
+    z-index: 555px;
+    position: absolute;
+}
+
+.hamburger {
+    background-color: #6d2e2e;
+    /* border-radius: 50%; */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border: 0;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    z-index: 111px;
+}
+
+.hamburger:focus {
+    outline: 0;
+}
+
+.hamburger .line {
+    background-color: #bb0c0c;
+    display: block;
+    margin: 4px auto;
+    height: 2px;
+    width: 20px;
+    transition: all .1s ease-in;
+}
+
+.hamburger.open .line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger.open .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open .line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* General styles */
+
+
+p {
+    letter-spacing: .5px;
+    line-height: 1.6;
+}
+
+
+
+
+/*========= スクロールダウンのためのCSS ===============*/
+
+/*=== 9-1-2 丸が動いてスクロールを促す ====*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown2 {
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    bottom: 10px;
+    left: 6%;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown2 span {
+    /*描画位置*/
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    /*テキストの形状*/
+    color: #eee;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    /*縦書き設定*/
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+/* 丸の描写 */
+.scrolldown2:before {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    left: -4px;
+    /*丸の形状*/
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #eee;
+    /*丸の動き1.6秒かけて透過し、永遠にループ*/
+    animation:
+        circlemove 1.6s ease-in-out infinite,
+        cirlemovehide 1.6s ease-out infinite;
+}
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@keyframes circlemove {
+    0% {
+        bottom: 45px;
+    }
+
+    100% {
+        bottom: -5px;
+    }
+}
+
+/*上から下にかけて丸が透過→不透明→透過する*/
+@keyframes cirlemovehide {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 線の描写 */
+.scrolldown2:after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /*線の形状*/
+    width: 2px;
+    height: 50px;
+    background: #eee;
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+
+
+#container {
+    position: relative;
+    z-index: 1;
+    background: #c9e7dd;
+    padding: 600px 0;
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+
+    #header,
+    #header:before {
+        height: 90vh;
+    }
+
+}
+
+
+/*                              mainvisial                                     */
+/* らーめん */
+.main-back {
+    background-color: #DB4A4A;
+    width: 100%;
+    height: 1800px;
+
+}
+
+#ra-men img {
+    margin: 0 auto;
+
+    width: 100%;
+}
+
+.background #ramen-red {
+    background-color: #bf7d7d;
+    margin-top: -10%;
+}
+
+.background-2 {
+    background-color: #f7d2d2;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+}
+
+.main-teki h2 {
+    margin: 0;
+    padding-top: 7%;
+    text-align: center;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 70px;
+    font-weight: 400;
+    font-style: normal;
+    height: auto;
+
+}
+
+.main-teki h3 {
+    margin: 0;
+    padding: 7%;
+    padding-top: 7%;
+    text-align: center;
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    height: auto;
+
+}
+
+.main-aitm {
+    margin: 0 auto;
+}
+
+.item-img img {
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    height: auto;
+    padding: 10px;
+    background: #ffffff;
+    box-shadow: 15px 15px 6px #000000;
+
+}
+
+
+
+
+/* ビール */
+#beer {
+    background-color: #F8BC77;
+    width: 100%;
+    height: 800px;
+}
+
+
+#sake {
+    background-color: #73bae2;
+    width: 100%;
+    height: 800px;
+}
+
+
+#tare {
+    background-color: #a6664b;
+    width: 100%;
+    height: 800px;
+}
+
+
+#hegi {
+    background-color: #7a9154;
+    width: 100%;
+    height: 800px;
+}
+
+
+#jun {
+    background-color: #c176b3;
+    width: 100%;
+    height: 800px;
+}
+
+#onsen {
+    background-color: #6199db;
+    width: 100%;
+    height: 800px;
+}
+
+
+.background {
+    background-color: #F8C1C1;
+    height: auto;
+    text-align: center;
+}
+
+/* 目次 */
+.tableofcontents {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.tableofcontents h2 {
+    font-family: "Mochiy Pop One", sans-serif;
+
+}
+
+
+.tableofcontents ol {
+    text-align: justify;
+    margin-left: 21%;
+    background-color: #eee;
+    width: 55%;
+    padding: 3%;
+
+}
+
+.tableofcontents li {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 25px;
+    color: #000000;
+    padding: 2%;
+    text-decoration: none;
+}
+
+.tableofcontents ol :hover {
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.3);
+    border-color: transparent;
+}
+
+.main-page h2 {
+    background: #ec8888;
+    box-shadow: 7px 7px 2px #000000;
+    font-size: 30px;
+    width: 70%;
+    height: 5%;
+    margin-left: 14%;
+    text-align: center;
+    padding: 1%;
+}
+
+.main-page img {
+    width: 60%;
+    height: auto;
+    padding: 10px;
+    background: #ffffff;
+    box-shadow: 15px 15px 6px #000000;
+}
+
+#first {
+    width: 75%;
+    margin-left: 13%;
+    font-size: 25px;
+    text-align: center;
+}
+
+#mise {
+    width: 60%;
+    height: 500px;
+}
+
+.point {
+    text-align: justify;
+    margin: 0;
+    margin-left: 25%;
+    padding: 1%;
+    font-size: 20px;
+    width: 50%;
+    background-color: #c7c7c7ad;
+}
+
+.main-access {
+    background-color: #bf7d7d;
+    width: 85%;
+    padding: 2%;
+    display: flex;
+    text-align: justify;
+    margin-left: 6%;
+}
+
+
+.access {
+    width: 80%;
+    padding: 2%;
+
+}
+
+.access img {
+    width: 80%;
+    margin-top: 9%;
+    height: auto;
+    padding: 7px;
+    background: #ffffff;
+    box-shadow: 15px 15px 6px #000000;
+}
+
+.access h2 {
+    font-size: 40px;
+}
+
+.access ul {
+    list-style-type: none;
+}
+
+.access li {
+    font-family: "Mochiy Pop One", sans-serif;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.map {
+    display: flex;
+}
+
+.map img {
+    width: 30%;
+    margin-left: 40%;
+}
+iframe{
+    margin-left: 20%;
+    width: 50%;
+    height: 20%;
+}
